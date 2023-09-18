@@ -6,12 +6,30 @@
       <p class="slds-var-p-horizontal_small">{specie.Description__c}</p>
       <div class="slds-align_absolute-center">
         <img
-          class="specie slds-var-m-around_medium" 
+          class="specie slds-var-m-around_medium"
           src={specie.Image_URL__c}
-          alt={specie.Name} 
+          alt={specie.Name}
         />
       </div>
-      <p class="slds-var-p-horizontal_small">{specie.Location__c}</p>
+      <div class="slds-var-p-horizontal_small slds-align_absolute-center">
+        <template if:true={isOutdoors}>
+          <!-- Mostrar icon Sol -->
+          <lightning-icon
+            icon-name="custom:custom3"
+            alternative-text="Outdoors"
+            title="Outdoors"
+          ></lightning-icon>
+        </template>
+        <template if:true={isIndoors}>
+          <!-- Mostrar icon Sol -->
+          <lightning-icon
+            icon-name="standard:home"
+            alternative-text="Indoors"
+            title="Indoors"
+          ></lightning-icon>
+        </template>
+      </div>
+      <!-- <p class="slds-var-p-horizontal_small">{specie.Location__c}</p> -->
       <!-- Body end -->
     </lightning-card>
   </div>

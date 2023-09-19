@@ -1,7 +1,11 @@
 <template>
   <div class="slds-align_absolute-center">
     <lightning-card title={specie.Name} icon-name="custum:custum5">
-      <lightning-button label="View Details" slot="actions"></lightning-button>
+      <lightning-button
+        label="View Details"
+        onclick={navigateToRecordViewPage}
+        slot="actions"
+      ></lightning-button>
       <!-- Body start -->
       <p class="slds-var-p-horizontal_small">{specie.Description__c}</p>
       <div class="slds-align_absolute-center">
